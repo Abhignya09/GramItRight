@@ -80,7 +80,6 @@ ul {
 }
 
 nav a:hover {
-  text-decoration: purple;
   color: #fff;
 }
 
@@ -305,22 +304,22 @@ nav a:hover {
 }
 
 /* About Page Specific Styles */
-.about-page-container {
+/* .about-page-container {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
-  /* padding: 30px; */
+  padding: 30px;
   background-color: #fffdf7;
   color: #333;
-}
+} */
 
-.about-page-container .about-page-hero {
+.about-page-hero {
   padding: 40px;
   text-align: center;
   border-radius: 12px;
   margin-bottom: 30px;
 }
 
-.about-page-container .about-page-hero h1 {
+.about-page-hero h1 {
   font-size: 36px;
   margin-bottom: 10px;
   color: #333;
@@ -330,12 +329,9 @@ nav a:hover {
   font-size: 18px;
   color: #555;
 }
-.secondary {
-  background-color: #ffc2d1;
-}
 
 .about-page-container .about-page-section {
-  /* margin-bottom: 30px; */
+  margin-bottom: 30px;
 }
 
 .about-page-container .about-page-section h2 {
@@ -377,13 +373,59 @@ nav a:hover {
   border-radius: 10px;
 }
 
-.about-page-section1 {
+/* .about-page-section1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 20px;
+  color: #ccc;
+  
+  justify-content: center;
+  background-image: url("./pages/bgimg.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background: scroll 100%;
+  height: 80vh;
+  width: 100%;
+  background-size: 100% 100%;
+}*/
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .about-page-section2 {
   display: flex;
   flex-direction: column;
+}
+/* Ensuring equal height sections */
+.secondary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch; /* All sections stretch equally */
+}
+
+.about-page-section1,
+.about-page-section2 {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes content evenly */
+  height: 100%; /* Ensures uniform height */
+}
+.about-page-section1:hover,
+.about-page-section2:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  transform: translate3d(0px, -1px, 0px);
 }

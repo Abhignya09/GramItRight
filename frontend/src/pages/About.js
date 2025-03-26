@@ -16,8 +16,8 @@ function About() {
           <h2>What We Do</h2>
           <ul>
             <li>🔸 Convert Recipe Measurements with Precision</li>
-            <li>🔸 AI-Backed Ingredient Recognition</li>
-            <li>🔸 Simple and User-Friendly Interface</li>
+            <li>🔸 AI-Backed Ingredient Recognition </li>
+            <li>🔸 Simple and User-Friendly Interface </li>
           </ul>
         </section>
 
