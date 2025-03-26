@@ -391,7 +391,8 @@ nav a:hover {
   width: 100%;
   background-size: 100% 100%;
 }*/
-ul {
+.about-page-section1 ul,
+.about-page-section2 ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
