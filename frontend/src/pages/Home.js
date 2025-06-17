@@ -1,7 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 
 function Home() {
+  const conversions = {
+    flour: {
+      cup: 120,
+      tablespoon: 7.5,
+      teaspoon: 2.5,
+    },
+    sugar: {
+      cup: 200,
+      tablespoon: 12.5,
+      teaspoon: 4.2,
+    },
+    butter: {
+      cup: 227,
+      tablespoon: 14.2,
+      teaspoon: 4.7,
+    },
+    milk: {
+      cup: 240,
+      tablespoon: 15,
+      teaspoon: 5,
+    },
+  };
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
+
+  const handleConvert = () => {
+    const pattern = /(\d+\.?\d*)\s*(cup|tablespoon|teaspoon)s?\s+(\w+)/i;
+    const match = input.match(pattern);
+
+    if (match) {
+      const quantity = parseFloat(match[1]);
+      const unit = match[2].toLowerCase();
+      const item = match[3].toLowerCase();
+
+      if (conversions[item] && conversions[item][unit]) {
+        const grams = quantity * conversions[item][unit];
+        setOutput(`${grams} grams`);
+      } else {
+        setOutput("Sorry, conversion not available for that ingredient.");
+      }
+    } else {
+      setOutput("Invalid input. Try something like '1 cup flour'");
+    }
+  };
   return (
     <div className="home-container">
       <div className="intro-section">
@@ -58,7 +102,7 @@ function Home() {
       </section>
 
       {/* Try It Live */}
-      <section className="try-live-section">
+      {/* <section className="try-live-section">
         <h2>Try It Live</h2>
         <p>Enter an ingredient and see conversion in action!</p>
         <div className="try-live-inputs">
@@ -70,7 +114,21 @@ function Home() {
           <button className="convert-btn">Convert</button>
         </div>
         <div className="conversion-result">Output: 120 grams of flour</div>
-      </section>
+      </section> */}
+      <div className="try-container">
+        <h3>🎯 Try It Live</h3>
+        <input
+          type="text"
+          placeholder="e.g. 1 cup flour"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="try-input"
+        />
+        <button onClick={handleConvert} className="try-btn">
+          Convert
+        </button>
+        <p className="try-output">{output}</p>
+      </div>
 
       {/* Footer */}
       <footer className="footer">
