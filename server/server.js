@@ -99,6 +99,9 @@ app.post("/get-ingredients", async (req, res) => {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 });
+app.get("/", (req, res) => {
+  res.send("✨ GramItRight backend is live and running! ✨");
+});
 
 // Start the server
 const PORT = 5000;

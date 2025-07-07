@@ -5,14 +5,18 @@ function Converter() {
   const [recipe, setRecipe] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [error, setError] = useState("");
+  // fetch(`${process.env.REACT_APP_BACKEND_URL}/get-ingredients`)
 
   const fetchIngredients = async () => {
     try {
-      const response = await fetch("http://localhost:5000/get-ingredients", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ recipe }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/get-ingredients`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ recipe }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to fetch data");

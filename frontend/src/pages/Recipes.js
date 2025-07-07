@@ -25,7 +25,6 @@ const Recipes = () => {
         "Red Chili Powder": "10g",
         "Coriander Powder": "15g",
         "Cumin Powder": "10g",
-        "Garam Masala": "5g",
         "Dried Mango Powder (Amchur)": "5g",
         Salt: "10g",
         "Fresh Coriander Leaves (for garnish)": "20g",
