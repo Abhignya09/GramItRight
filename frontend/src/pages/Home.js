@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function Home() {
+  const navigate = useNavigate();
   const conversions = {
     flour: {
       cup: 120,
@@ -60,7 +62,10 @@ function Home() {
       <section className="hero-section">
         <h1>Make Baking Perfect</h1>
         <p className="hero-subtext"></p>
-        <button className="try-btn">Try It Now</button>
+        {/* <button className="try-btn">Try It Now</button> */}
+        <button className="try-btn" onClick={() => navigate("/converter")}>
+          Try It Now
+        </button>
       </section>
 
       {/* Why Gram It Right */}
