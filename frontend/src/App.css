@@ -551,6 +551,7 @@ nav a:hover {
 
 .find-button {
   padding: 12px 28px;
+  width: 50%;
   background: linear-gradient(90deg, #f43f5e, #f97316);
   color: #fff;
   font-size: 16px;
