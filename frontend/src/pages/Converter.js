@@ -56,7 +56,19 @@ function Converter() {
       </div>
 
       {error && <p className="error-message">{error}</p>}
-      {ingredients && <pre className="ingredients-display">{ingredients}</pre>}
+      {ingredients && (
+        <div className="output-wrapper">
+          <pre className="ingredients-display">{ingredients}</pre>
+          <button
+            className="copy-button"
+            onClick={() => navigator.clipboard.writeText(ingredients)}
+          >
+            📋 Copy
+          </button>
+        </div>
+      )}
+
+      {/* {ingredients && <pre className="ingredients-display">{ingredients}</pre>} */}
     </div>
   );
 }
