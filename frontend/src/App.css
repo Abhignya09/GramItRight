@@ -598,10 +598,10 @@ nav a:hover {
     align-items: stretch;
   }
 
-  .input-field,
+  /* .input-field,
   .find-button {
     width: 100%;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
