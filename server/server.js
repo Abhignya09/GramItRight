@@ -63,7 +63,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 // Use CORS middleware
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow only this origin, or use '*' for all origins
+    origin: "*", // Allow only this origin, or use '*' for all origins
     methods: ["GET", "POST"], // Allow these methods
     allowedHeaders: ["Content-Type"], // Allow these headers
   })
