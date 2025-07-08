@@ -64,10 +64,11 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 app.use(
   cors({
     origin: "*", // Allow only this origin, or use '*' for all origins
-    methods: ["GET", "POST"], // Allow these methods
+    methods: ["GET", "POST", "OPTIONS"], // Allow these methods
     allowedHeaders: ["Content-Type"], // Allow these headers
   })
 );
+// app.use(cors());
 // Middleware to parse JSON requests
 app.use(express.json());
 
